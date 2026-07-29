@@ -10,11 +10,11 @@ spec:
   containers:
   - name: nginx # container name
     image: nginx # by default it will get from docker hub
-  # tolerations:
-  # - key: "hardware"
-  #   operator: "Equal"
-  #   value: "gpu"
-  #   effect: "NoExecute"
-  # nodeSelector:
-  #   project: roboshop
+  tolerations:
+  - key: "hardware"
+    operator: "Equal"
+    value: "gpu"
+    effect: "NoExecute"
+  nodeSelector:
+    project: roboshop
   
